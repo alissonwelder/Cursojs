@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeiros Passos com DOM</title>
+    <style>
+    body {
+        background-color: rgb(100, 118, 165);
+        color: white;
+        font: normal 18pt, Arial;
+    }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <P>Aprendendo a usar o <strong>DOM</strong> em javascript</P>
+    <div id="msg">Clique em mim</div>
+
+    <script>
+        
+        var corpo = window.document.body
+        corpo.style.backgroundColor = '#6C7B8B'
+        var d = window.document.querySelector('div#msg')
+        d.style.color= 'black'
+        
+        /* var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1] // selecionar o primeiro paragrafo
+        var d = window.document.getElementById('msg')
+
+        window.document.write('está escrito assim: ' + p1.innerText)// replicar o primeiro paragrafo
+        mudar cor do primeiro paragrafo
+        p1.style.color = 'blue'
+        corpo.style.backgroundColor = 'black' // mudar cor do corpo(body)
+
+        document.write(p1.innerHTML) // pega também a formatação html.
+        d.style.background = 'green'
+        d.innerText = 'Estou Aguardando'
+        
+        // outra opção:
+        window.document.getElementById('msg') = 'Olá' */
+        
+        </script>
+</body>
+</html>

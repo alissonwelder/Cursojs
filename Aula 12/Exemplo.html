@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>First Page</title>
+
+    <style>
+
+        *{margin: 0; padding: 0;}
+
+        body{ background: rgb(99, 75, 57); text-align: center; font:normal 22px Segoe Print; color: white;}
+
+        #box{ width: 100%; height: 100vh; display: flex; flex-direction: row; justify-content: center; align-items: center;}
+
+        h2{ margin-top: 50px; margin-bottom: -200px;}
+
+        #hora{ width: 800px; height: 100px; border: 2px solid rgb(247, 244, 244);}
+
+    </style>
+
+</head>
+
+<body>
+
+        <h2>Seja Bem-vindo</h2>         
+
+    <main id="box">  
+
+         
+
+            <section id="hora" ></section>
+
+    </main>
+
+
+
+
+
+  <script>
+
+      var now        = new Date()
+
+      var hatual     = now.getHours() 
+
+      var matual     = now.getMinutes()
+
+      var datual     = now.getDay()
+
+      var mesatual   = now.getMonth()
+
+      var aatual     = now.getFullYear()
+
+      var mostrahora = window.document.querySelector('section#hora')
+
+      mostrahora.innerHTML = `<p>Agora são ${hatual} horas e ${matual} minutos,  dia ${datual} do mês ${mesatual} do ano ${aatual}.   </p> `
+
+      if(hatual < 12){
+
+          mostrahora.innerHTML += `<p> Bom dia!</p>`
+
+      }else if(hatual >= 12 && hatual < 18){
+
+          mostrahora.innerHTML += `<p> Boa tarde!</p>`
+
+      } else {
+
+          mostrahora.innerHTML += '<p> Boa noite!</P>'
+
+      }
+
+  </script>
+
+    
+
+</body>
+
+</html>
