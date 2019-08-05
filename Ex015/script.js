@@ -10,13 +10,13 @@ function verificar(){
         var idade = ano - Number(fano.value)
         var gênero = ''
         var img = document.createElement('img')
-        img.setAttribute('id', 'foto')
+        img.setAttribute('id', 'foto') // adiciona o id com nome foto
 
         if (fsex[0].checked){
             gênero = 'Homem'
             if ( idade >= 0 && idade < 10){
                 // criança
-                img.setAttribute('src', 'bebemenino.png')
+                img.setAttribute('src', 'bebemenino.png') // adiciona o src da imagem
             } else if (idade < 21){
                 // Jovem
                 img.setAttribute('src', 'jovemhomem.png')
@@ -46,7 +46,7 @@ function verificar(){
         }
         res.style.textAlign = 'center'
         res.innerHTML = `Detectamos ${gênero} com ${idade} anos.`
-        res.appendChild(img)
+        res.appendChild(img) // adicona a imagem ao final da pagina
 
     } 
 
